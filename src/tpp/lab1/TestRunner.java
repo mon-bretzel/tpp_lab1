@@ -26,7 +26,7 @@ public class TestRunner {
 		}
 	}
 	
-	public void runTests(Class clazz, Object obj) throws SecurityException {
+	public void runTests(Class<?> clazz, Object obj) throws SecurityException {
 		int total = 0;
 		int successful = 0;
 		int failed = 0;
