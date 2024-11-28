@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class TestRunner {
-	private String className;
+	private final String className;
 
 	public TestRunner(String className) {
 		this.className = className;
@@ -21,8 +21,7 @@ public class TestRunner {
 			
 			runTests(clazz, obj);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 	
